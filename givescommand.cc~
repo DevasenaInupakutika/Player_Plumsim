@@ -1,0 +1,23 @@
+/*
+
+
+    g++ -o givescommand givescommand.cc
+
+
+*/
+#include <stdlib.h>
+#include <iostream>
+
+
+
+int main(int argc, char *argv[]){
+
+//     system("./main&");
+//     system("./main -p 6666 -r 2 -y 1");
+
+
+    system("./main | ./main -p 6666 -r 2 -y 1");
+
+
+    return 1;
+} 

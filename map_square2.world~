@@ -1,0 +1,225 @@
+
+# Desc: 1 pioneer robot with laser	
+# CVS: $Id: simple.world,v 1.63 2006/03/22 00:22:44 rtv Exp $
+
+# defines Erratic-like robots
+include "irobot.inc"
+
+# defines 'map' object used for floorplans
+include "map_square.inc"
+
+# defines sick laser
+include "sick1.inc"
+paused 0
+# size of the world in meters
+size [44 44]
+
+# set the resolution of the underlying raytrace model in meters
+resolution 0.01
+
+# update the screen every 10ms (we need fast update for the stest demo)
+gui_interval 20
+
+# configure the GUI window
+window
+(
+  size [ 635.000 666.000 ] # in pixels
+  scale 37.481   # pixels per meter
+  center [ -0.019  -0.282 ]
+  rotate [ 0  0 ]
+  			
+  show_data 1              # 1=on 0=off
+)
+
+
+
+######################################
+##########    Gas models    ##########
+
+
+
+# load an environment bitmap
+floorplan
+( 
+  name "cave"
+  size [16.000 16.000 0.800]
+  pose [0 0 0 0]
+  bitmap "bitmaps/cave.png"
+  
+  name "map1"
+
+)
+######################################
+######################################
+
+# create a robot
+roomba
+(
+  name "robot1"
+  color "red"
+  pose [38 2 0 180]
+#  pose [1 1 0 0]
+  sicklaser()
+  	  localization "gps"
+ localization_origin [ 0 0 0 0 ]
+#  localization_origin [ -20 -12 0 0 ]
+#  erratic_sonar()
+)
+
+# create a robot
+roomba
+(
+  name "robot2"
+  color "blue"
+  pose [38 3 0 180]
+  sicklaser()
+  	  localization "gps"
+# localization_origin [ 0 0 0 0 ]
+  localization_origin [ 0 0 0 0 ]
+
+#  erratic_sonar()
+)
+
+# create a robot
+roomba
+(
+  name "robot3"
+  color "yellow"
+  pose [38 4 0 180]
+  sicklaser()
+  	  localization "gps"
+#  localization_origin [ 0 0 0 0 ]
+  localization_origin [ 0 0 0 0 ]
+
+#  erratic_sonar()
+)
+
+# create a robot
+roomba
+(
+  name "robot4"
+  color "black"
+  pose [38 5 0 180]
+  sicklaser()
+  	  localization "gps"
+#localization_origin [ 0 0 0 0 ]
+  localization_origin [ 0 0 0 0 ]
+
+#  erratic_sonar()
+)
+
+# create a robot
+roomba
+(
+  name "robot5"
+  color "green"
+  pose [38 6 0 180]
+  sicklaser()
+  	  localization "gps"
+#localization_origin [ 0 0 0 0 ]
+  localization_origin [ 0 0 0 0 ]
+
+#  erratic_sonar()
+)
+
+# create a robot
+roomba
+(
+  name "robot6"
+  color "grey"
+  pose [38 7 0 180]
+  sicklaser()
+  	  localization "gps"
+#localization_origin [ 0 0 0 0 ]
+  localization_origin [ 0 0 0 0 ]
+
+#  erratic_sonar()
+)
+
+# create a robot
+roomba
+(
+  name "robot7"
+  color "pink"
+  pose [38 8 0 180]
+  sicklaser()
+  	  localization "gps"
+#localization_origin [ 0 0 0 0 ]
+  localization_origin [ 0 0 0 0 ]
+
+#  erratic_sonar()
+)
+
+# create a robot
+roomba
+(
+  name "robot8"
+  color "orange"
+  pose [38 9 0 180]
+  sicklaser()
+  	  localization "gps"
+#localization_origin [ 0 0 0 0 ]
+ localization_origin [ 0 0 0 0 ]
+#  erratic_sonar()
+)
+
+# create a robot
+roomba
+(
+  name "robot9"
+  color "orange"
+  pose [38 10 0 180]
+  sicklaser()
+  	  localization "gps"
+#localization_origin [ 0 0 0 0 ]
+  localization_origin [ 0 0 0 0 ]
+
+#  erratic_sonar()
+)
+ pose [2.000 1.500 0 0]
+# create a robot
+roomba
+(
+  name "robot10"
+  color "orange"
+  pose [38 11 0 180]
+  sicklaser()
+  	  localization "gps"
+#localization_origin [ 0 0 0 0 ]
+  localization_origin [ 0 0 0 0 ]
+
+#  erratic_sonar()
+)
+
+# create a robot
+roomba
+(
+  name "robot11"
+  color "orange"
+  pose [38 12 0 180]
+  sicklaser()
+  	  localization "gps"
+#localization_origin [ 0 0 0 0 ]
+  localization_origin [ 0 0 0 0 ]
+
+#  erratic_sonar()
+)
+
+# create a robot
+roomba
+(
+  name "robot12"
+  color "orange"
+  pose [38 13 0 180]
+  sicklaser()
+  	  localization "gps"
+#localization_origin [ 0 0 0 0 ]
+  localization_origin [ 0 0 0 0 ]
+
+#  erratic_sonar()
+)
+bg
+(		  
+  name "bk"
+  pose [ 0 0 0 0 ] 
+)
